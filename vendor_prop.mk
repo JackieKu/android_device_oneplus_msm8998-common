@@ -94,7 +94,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Connor
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.connor.disable=0
+    persist.vendor.connor.disable=1
 
 # Core control
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -103,9 +103,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Data
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
+    persist.vendor.data.mode=concurrent \
+    ro.vendor.use_data_netmgrd=true
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -124,14 +124,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=420 \
     ro.opengles.version=196610 \
     debug.sf.hw=1 \
-    debug.gralloc.gfx_ubwc_disable=0 \
+    debug.sf.enable_hwc_vds=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     persist.debug.wfd.enable=1 \
+    persist.hwc.enable_vds=1 \
     persist.sys.force_sw_gles=0 \
     persist.sys.wfd.virtual=0 \
-    persist.hwc.enable_vds=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
+    vendor.gralloc.disable_wb_ubwc=1 \
     vendor.display.disable_skip_validate=1 \
     vendor.display.enable_default_color_mode=0 \
     vendor.display.perf_hint_window=50
@@ -207,13 +208,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=true \
     persist.sys.oem_smooth=1 \
     persist.radio.VT_CAM_INTERFACE=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.efssync=true \
     persist.radio.multisim.config=dsds \
     persist.radio.enhance_ecall=true \
     persist.radio.hw_mbn_update=0 \
     persist.radio.sw_mbn_update=0 \
     persist.radio.start_ota_daemon=0 \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
